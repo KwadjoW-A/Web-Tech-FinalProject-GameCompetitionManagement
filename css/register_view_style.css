@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    color: #FFF;
+    font-family: "Inria Sans";
+}
+.column {
+    float: left;
+
+}
+
+.left {
+    width: 50%;
+}
+
+.input-box{
+    width: 80%;
+
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+    background: #D9D9D9;
+    
+}
+
+.right {
+    width: 50%;
+}
+
+.equal {
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-right{
+    background-color:  #D2D0D0;
+    height: 100vh;
+    color:white
+ 
+}
+
+.column-left{
+    background-color: black;
+    height: 100vh;
+}
+
+
+.title{
+
+    text-align: center;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.2px;
+    margin-bottom: 10%;
+    margin-top : 5%;
+}
+
+form{
+    margin: auto;
+    margin-left: 5%;
+
+}
+label{
+    margin-top: 25%;
+    font-size: 20px;
+
+    
+}
+#einput-full-width{
+ width:90%;   
+}
+#ginput-full-width{
+    width:88%;   
+   }
+#rinput-full-width{
+    width:94%;   
+   }
+#pinput-full-width{
+    width:90%;   
+   }
+
+#signup-btn{
+    margin-top: 20px;
+    padding: 3%;
+    width: 95%;
+    color: black;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.4px;
+
+}
+
+.greeting{
+    color : black;
+    margin-top: 90px;
+    margin-left: 40px;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+img{
+    width: 510px;
+height: 318px;
+flex-shrink: 0;
+border-radius: 5px;
+border: 10px solid #000;
+margin-left: 30px;
+}
+
+.sgtext{
+    color: #000;
+
+text-align: center;
+font-family: "Inria Sans";
+margin-top: 10px;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.6px;
+}
+
+a .btn-in{
+    width: 122px;
+    height: 42px;
+    margin-top: 10px;
+    margin-left: 40%;
+    flex-shrink: 0;
+    align-items: center;
+    background-color: #000;
+}
