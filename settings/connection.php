@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = getenv('MYSQL_PASSWORD');
 $dbname = "game_competition_db";
 
 // Create connection

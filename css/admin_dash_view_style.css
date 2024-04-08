@@ -30,9 +30,10 @@
     height: 100vh;
 }
 
-.profile-info p{
-    color:black;
+.profile-info{
+  margin: auto;
 }
+
 
   
   /* Clear floats after the columns */

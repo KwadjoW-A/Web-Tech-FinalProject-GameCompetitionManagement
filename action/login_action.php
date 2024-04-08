@@ -12,7 +12,7 @@ if (isset($_POST["signin-btn"])) {
         exit();
     }
 
-    $sql_query = "SELECT * FROM users WHERE email = ?";
+    $sql_query = "SELECT * FROM Users WHERE email = ?";
     $stmt = $con->prepare($sql_query);
     $stmt->bind_param("s", $email);
     $stmt->execute();

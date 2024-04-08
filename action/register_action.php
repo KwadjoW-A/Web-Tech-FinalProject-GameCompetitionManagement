@@ -1,8 +1,9 @@
 <?php
 include ("../settings/connection.php");
-
-if (isset($_POST["signin-btn"])) {
+echo "K";
+if (isset($_POST["signup-btn"])) {
     $fname = mysqli_real_escape_string($con, $_POST['fname']);
+    echo "ec";
     $lname = mysqli_real_escape_string($con, $_POST['lname']);
     $gender = $_POST['gender'];
     $tel = mysqli_real_escape_string($con, $_POST['pnumber']);
@@ -10,7 +11,6 @@ if (isset($_POST["signin-btn"])) {
     $role = $_POST["role"];
     $passwd = $_POST['password']; 
     $repasswd = $_POST['repassword'];
-
 
     // Check for empty fields
     if (empty($fname) || empty($lname) || ($gender!="0" && $gender !="1") || empty($tel) || empty($email) || empty($role) || empty($passwd) || empty($repasswd)) {
@@ -31,7 +31,7 @@ if (isset($_POST["signin-btn"])) {
 
 
     // Check if email already exists
-    $sql_check_email = "SELECT * FROM users WHERE email = ?";
+    $sql_check_email = "SELECT * FROM Users WHERE email = ?";
 
     $stmt_check_email = $con->prepare($sql_check_email);
 
@@ -54,7 +54,7 @@ if (isset($_POST["signin-btn"])) {
 
 
 
-    $sql = "INSERT INTO users (rid, fname, lname, gender, tel, email, password) VALUES (?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO Users (rid, fname, lname, gender, tel, email, password) VALUES (?,?,?,?,?,?,?)";
 
     $stmt = $con->prepare($sql);
     
