@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/admin_dash_style.css">
+    <link rel="stylesheet" href="../css/play_dash_style.css">
 
     <title>Dashboard</title>
 </head>
@@ -24,15 +24,14 @@
                 include("../action/show_full_name_action.php");
             ?>
             <hr>
-            <p class= "v">Organizer</p>
+            <p class= "v">Competitor</p>
         </div>
         <div class = "nav">
             <a id = "id-dash"><p>Dashboard</p></a>
-            <a href="../admin/admin_manage_competition_view.php"><p >Manage Competition</p></a>
-            <a href="../admin/admin_schedule_competition_view.php"><p>Schedule Competition</p></a>
+            <a href="../view/play_view_competition_applied_view.php"><p>Competitions Applied To</p></a>
+
         </div>
         <div class= "nav-foot">
-            <a href=""><p>Settings</p></a>
             <a href="../login/logout_view.php"><p id ="link-logout">Logout</p></a>
 
     </div>
@@ -41,7 +40,23 @@
 
     <div class = "column right column-right">
         
-        <p  class= "title">Dashboard</p>
+        <p  class= "title">Register for Competitions</p>
+        <?php 
+        $cid = $_GET['id'];
+        
+        echo '<form action="../action/register_for_competition_action.php" method="post">';
+            echo '<input type="hidden" name="cid" value="' . $cid . ' hidden">';
+            echo '<label for="reason">Reason for Applying:</label><br>';
+            echo '<textarea id="reason" name="reason" rows="8" cols="80"></textarea><br>';
+            echo '<input type="submit" name = "reg">';
+        echo '</form>';
+
+
+
+        ?>
+
+
+
 
 
     </div>

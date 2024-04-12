@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/admin_dash_style.css">
+    <link rel="stylesheet" href="../css/admin_manage_player_request_style.css">
 
-    <title>Dashboard</title>
+    <title>Manage Player Request</title>
 </head>
 <body>
 <div class = "row">
@@ -42,6 +42,27 @@
     <div class = "column right column-right">
         
         <p  class= "title">Dashboard</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name Of Player</th>
+                <th>Name of Competition</th> 
+                <th>Reason</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody id = "tbody">
+
+                <?php
+                    $cid = $_GET["id"];
+                    include('../action/get_player_request_action.php');
+                ?>
+
+            </tbody>
+
+
+        </table>
 
 
     </div>

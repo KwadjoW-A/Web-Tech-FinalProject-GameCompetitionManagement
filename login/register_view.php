@@ -90,4 +90,42 @@
     </div>
 </div>
 </body>
+<script>
+      function validateForm() {
+    var fname = document.forms["registrationForm"]["fname"].value;
+    var lname = document.forms["registrationForm"]["lname"].value;
+    var gender = document.forms["registrationForm"]["gender"].value;
+    var pnumber = document.forms["registrationForm"]["pnumber"].value;
+    var email = document.forms["registrationForm"]["email"].value;
+    var role = document.forms["registrationForm"]["role"].value;
+    var password = document.forms["registrationForm"]["password"].value;
+    var repassword = document.forms["registrationForm"]["repassword"].value;
+
+    // Email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address");
+        return false;
+    }
+
+    // Phone number validation
+    var phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(pnumber)) {
+        alert("Please enter a valid 10-digit phone number");
+        return false;
+    }
+
+    // Password validation
+    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    if (!passwordRegex.test(password)) {
+        alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit");
+        return false;
+    }
+
+    // Add more validation as needed for other fields
+
+    return true;
+}
+
+    </script>
 </html>
